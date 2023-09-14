@@ -2207,7 +2207,7 @@ button,
 
 .container {
   width: 100%;
-  max-width: 1920px;
+  max-width: 1440px;
   margin: 0 auto;
   padding: 0 120px;
 }
@@ -2512,8 +2512,8 @@ button,
     margin-left: -5px;
     padding-top: 24px;
     padding-bottom: 40px;
-    max-height: 450px;
     overflow: auto;
+    max-height: calc(100vh - 110px);
   }
 }
 @media (max-width: 767px) {
@@ -2522,7 +2522,7 @@ button,
     padding-bottom: 50px;
     margin-left: -6px;
     gap: 22px;
-    max-height: 400px;
+    max-height: calc(100vh - 69px);
   }
 }
 
@@ -2620,6 +2620,7 @@ button,
   .is-opened .page-header__wrapper {
     background-color: #ffffff;
     color: #2d383f;
+    max-height: 100vh;
   }
 }
 @media (min-width: 768px) and (max-width: 1199px) {
@@ -2682,6 +2683,16 @@ button,
   height: auto;
   position: relative;
 }
+@media (max-width: 1199px) {
+  .hero-block__slide {
+    min-height: 1086px;
+  }
+}
+@media (max-width: 767px) {
+  .hero-block__slide {
+    min-height: 632px;
+  }
+}
 .hero-block__slide::after {
   content: "";
   width: 100%;
@@ -2691,106 +2702,74 @@ button,
   background: linear-gradient(112deg, rgba(15, 20, 41, 0.33) 17.23%, transparent 94.93%);
 }
 .hero-block__slide--сaucasus {
-  background-image: -webkit-image-set(url("../img/hero-block/background-1-desktop-1x.webp") type("image/webp"), url("../img/hero-block/background-1-desktop-1x.jpg") type("image/jpg"));
-  background-image: image-set(url("../img/hero-block/background-1-desktop-1x.webp") type("image/webp"), url("../img/hero-block/background-1-desktop-1x.jpg") type("image/jpg"));
-}
-@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
-  .hero-block__slide--сaucasus {
-    background-image: -webkit-image-set(url("../img/hero-block/background-1-desktop-2x.webp") type("image/webp"), url("../img/hero-block/background-1-desktop-2x.jpg") type("image/jpg"));
-    background-image: image-set(url("../img/hero-block/background-1-desktop-2x.webp") type("image/webp"), url("../img/hero-block/background-1-desktop-2x.jpg") type("image/jpg"));
-  }
+  background-image: url("../img/hero-block/background-1-desktop-1x.jpg");
+  background-image: webkit-image-set(url("../img/hero-block/background-1-desktop-2x.jpg") 2x, url("../img/hero-block/background-1-desktop-1x.jpg") 1x);
+  background-image: -webkit-image-set(url("../img/hero-block/background-1-desktop-2x.webp") type("image/webp") 2x, url("../img/hero-block/background-1-desktop-1x.webp") type("image/webp") 1x, url("../img/hero-block/background-1-desktop-2x.jpg") type("image/jpg") 2x, url("../img/hero-block/background-1-desktop-1x.jpg") type("image/jpg") 1x);
+  background-image: image-set(url("../img/hero-block/background-1-desktop-2x.webp") type("image/webp") 2x, url("../img/hero-block/background-1-desktop-1x.webp") type("image/webp") 1x, url("../img/hero-block/background-1-desktop-2x.jpg") type("image/jpg") 2x, url("../img/hero-block/background-1-desktop-1x.jpg") type("image/jpg") 1x);
 }
 @media (max-width: 1199px) {
   .hero-block__slide--сaucasus {
-    background-image: -webkit-image-set(url("../img/hero-block/background-1-tablet-1x.webp") type("image/webp"), url("../img/hero-block/background-1-tablet-1x.jpg") type("image/jpg"));
-    background-image: image-set(url("../img/hero-block/background-1-tablet-1x.webp") type("image/webp"), url("../img/hero-block/background-1-tablet-1x.jpg") type("image/jpg"));
-  }
-}
-@media (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1199px) and (min-resolution: 144dpi), (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 1199px) and (min-resolution: 2dppx) {
-  .hero-block__slide--сaucasus {
-    background-image: -webkit-image-set(url("../img/hero-block/background-1-tablet-2x.webp") type("image/webp"), url("../img/hero-block/background-1-tablet-2x.jpg") type("image/jpg"));
-    background-image: image-set(url("../img/hero-block/background-1-tablet-2x.webp") type("image/webp"), url("../img/hero-block/background-1-tablet-2x.jpg") type("image/jpg"));
+    background-image: url("../img/hero-block/background-1-tablet-1x.jpg");
+    background-image: webkit-image-set(url("../img/hero-block/background-1-tablet-2x.jpg") 2x, url("../img/hero-block/background-1-tablet-1x.jpg") 1x);
+    background-image: -webkit-image-set(url("../img/hero-block/background-1-tablet-2x.webp") type("image/webp") 2x, url("../img/hero-block/background-1-tablet-1x.webp") type("image/webp") 1x, url("../img/hero-block/background-1-tablet-2x.jpg") type("image/jpg") 2x, url("../img/hero-block/background-1-tablet-1x.jpg") type("image/jpg") 1x);
+    background-image: image-set(url("../img/hero-block/background-1-tablet-2x.webp") type("image/webp") 2x, url("../img/hero-block/background-1-tablet-1x.webp") type("image/webp") 1x, url("../img/hero-block/background-1-tablet-2x.jpg") type("image/jpg") 2x, url("../img/hero-block/background-1-tablet-1x.jpg") type("image/jpg") 1x);
   }
 }
 @media (max-width: 767px) {
   .hero-block__slide--сaucasus {
-    background-image: -webkit-image-set(url("../img/hero-block/background-1-mobile-1x.webp") type("image/webp"), url("../img/hero-block/background-1-mobile-1x.jpg") type("image/jpg"));
-    background-image: image-set(url("../img/hero-block/background-1-mobile-1x.webp") type("image/webp"), url("../img/hero-block/background-1-mobile-1x.jpg") type("image/jpg"));
-  }
-}
-@media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 767px) and (min-resolution: 2dppx) {
-  .hero-block__slide--сaucasus {
-    background-image: -webkit-image-set(url("../img/hero-block/background-1-mobile-2x.webp") type("image/webp"), url("../img/hero-block/background-1-mobile-2x.jpg") type("image/jpg"));
-    background-image: image-set(url("../img/hero-block/background-1-mobile-2x.webp") type("image/webp"), url("../img/hero-block/background-1-mobile-2x.jpg") type("image/jpg"));
+    background-image: url("../img/hero-block/background-1-mobile-1x.jpg");
+    background-image: webkit-image-set(url("../img/hero-block/background-1-mobile-2x.jpg") 2x, url("../img/hero-block/background-1-mobile-1x.jpg") 1x);
+    background-image: -webkit-image-set(url("../img/hero-block/background-1-mobile-2x.webp") type("image/webp") 2x, url("../img/hero-block/background-1-mobile-1x.webp") type("image/webp") 1x, url("../img/hero-block/background-1-mobile-2x.jpg") type("image/jpg") 2x, url("../img/hero-block/background-1-mobile-1x.jpg") type("image/jpg") 1x);
+    background-image: image-set(url("../img/hero-block/background-1-mobile-2x.webp") type("image/webp") 2x, url("../img/hero-block/background-1-mobile-1x.webp") type("image/webp") 1x, url("../img/hero-block/background-1-mobile-2x.jpg") type("image/jpg") 2x, url("../img/hero-block/background-1-mobile-1x.jpg") type("image/jpg") 1x);
   }
 }
 .hero-block__slide--kamchatka {
-  background-image: -webkit-image-set(url("../img/hero-block/background-2-desktop-1x.webp") type("image/webp"), url("../img/hero-block/background-2-desktop-1x.jpg") type("image/jpg"));
-  background-image: image-set(url("../img/hero-block/background-2-desktop-1x.webp") type("image/webp"), url("../img/hero-block/background-2-desktop-1x.jpg") type("image/jpg"));
-}
-@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
-  .hero-block__slide--kamchatka {
-    background-image: -webkit-image-set(url("../img/hero-block/background-2-desktop-2x.webp") type("image/webp"), url("../img/hero-block/background-2-desktop-2x.jpg") type("image/jpg"));
-    background-image: image-set(url("../img/hero-block/background-2-desktop-2x.webp") type("image/webp"), url("../img/hero-block/background-2-desktop-2x.jpg") type("image/jpg"));
-  }
+  background-image: url("../img/hero-block/background-2-desktop-1x.jpg");
+  background-image: webkit-image-set(url("../img/hero-block/background-2-desktop-2x.jpg") 2x, url("../img/hero-block/background-2-desktop-1x.jpg") 1x);
+  background-image: -webkit-image-set(url("../img/hero-block/background-2-desktop-2x.webp") type("image/webp") 2x, url("../img/hero-block/background-2-desktop-1x.webp") type("image/webp") 1x, url("../img/hero-block/background-2-desktop-2x.jpg") type("image/jpg") 2x, url("../img/hero-block/background-2-desktop-1x.jpg") type("image/jpg") 1x);
+  background-image: image-set(url("../img/hero-block/background-2-desktop-2x.webp") type("image/webp") 2x, url("../img/hero-block/background-2-desktop-1x.webp") type("image/webp") 1x, url("../img/hero-block/background-2-desktop-2x.jpg") type("image/jpg") 2x, url("../img/hero-block/background-2-desktop-1x.jpg") type("image/jpg") 1x);
 }
 @media (max-width: 1199px) {
   .hero-block__slide--kamchatka {
-    background-image: -webkit-image-set(url("../img/hero-block/background-2-tablet-1x.webp") type("image/webp"), url("../img/hero-block/background-2-tablet-1x.jpg") type("image/jpg"));
-    background-image: image-set(url("../img/hero-block/background-2-tablet-1x.webp") type("image/webp"), url("../img/hero-block/background-2-tablet-1x.jpg") type("image/jpg"));
-  }
-}
-@media (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1199px) and (min-resolution: 144dpi), (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 1199px) and (min-resolution: 2dppx) {
-  .hero-block__slide--kamchatka {
-    background-image: -webkit-image-set(url("../img/hero-block/background-2-tablet-2x.webp") type("image/webp"), url("../img/hero-block/background-2-tablet-2x.jpg") type("image/jpg"));
-    background-image: image-set(url("../img/hero-block/background-2-tablet-2x.webp") type("image/webp"), url("../img/hero-block/background-2-tablet-2x.jpg") type("image/jpg"));
+    background-image: url("../img/hero-block/background-2-tablet-1x.jpg");
+    background-image: webkit-image-set(url("../img/hero-block/background-2-tablet-2x.jpg") 2x, url("../img/hero-block/background-2-tablet-1x.jpg") 1x);
+    background-image: -webkit-image-set(url("../img/hero-block/background-2-tablet-2x.webp") type("image/webp") 2x, url("../img/hero-block/background-2-tablet-1x.webp") type("image/webp") 1x, url("../img/hero-block/background-2-tablet-2x.jpg") type("image/jpg") 2x, url("../img/hero-block/background-2-tablet-1x.jpg") type("image/jpg") 1x);
+    background-image: image-set(url("../img/hero-block/background-2-tablet-2x.webp") type("image/webp") 2x, url("../img/hero-block/background-2-tablet-1x.webp") type("image/webp") 1x, url("../img/hero-block/background-2-tablet-2x.jpg") type("image/jpg") 2x, url("../img/hero-block/background-2-tablet-1x.jpg") type("image/jpg") 1x);
   }
 }
 @media (max-width: 767px) {
   .hero-block__slide--kamchatka {
-    background-image: -webkit-image-set(url("../img/hero-block/background-2-mobile-1x.webp") type("image/webp"), url("../img/hero-block/background-2-mobile-1x.jpg") type("image/jpg"));
-    background-image: image-set(url("../img/hero-block/background-2-mobile-1x.webp") type("image/webp"), url("../img/hero-block/background-2-mobile-1x.jpg") type("image/jpg"));
-  }
-}
-@media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 767px) and (min-resolution: 2dppx) {
-  .hero-block__slide--kamchatka {
-    background-image: -webkit-image-set(url("../img/hero-block/background-2-mobile-2x.webp") type("image/webp"), url("../img/hero-block/background-2-mobile-2x.jpg") type("image/jpg"));
-    background-image: image-set(url("../img/hero-block/background-2-mobile-2x.webp") type("image/webp"), url("../img/hero-block/background-2-mobile-2x.jpg") type("image/jpg"));
+    background-image: url("../img/hero-block/background-2-mobile-1x.jpg");
+    background-image: webkit-image-set(url("../img/hero-block/background-2-mobile-2x.jpg") 2x, url("../img/hero-block/background-2-mobile-1x.jpg") 1x);
+    background-image: -webkit-image-set(url("../img/hero-block/background-2-mobile-2x.webp") type("image/webp") 2x, url("../img/hero-block/background-2-mobile-1x.webp") type("image/webp") 1x, url("../img/hero-block/background-2-mobile-2x.jpg") type("image/jpg") 2x, url("../img/hero-block/background-2-mobile-1x.jpg") type("image/jpg") 1x);
+    background-image: image-set(url("../img/hero-block/background-2-mobile-2x.webp") type("image/webp") 2x, url("../img/hero-block/background-2-mobile-1x.webp") type("image/webp") 1x, url("../img/hero-block/background-2-mobile-2x.jpg") type("image/jpg") 2x, url("../img/hero-block/background-2-mobile-1x.jpg") type("image/jpg") 1x);
   }
 }
 .hero-block__slide--altai {
-  background-image: -webkit-image-set(url("../img/hero-block/background-3-desktop-1x.webp") type("image/webp"), url("../img/hero-block/background-3-desktop-1x.jpg") type("image/jpg"));
-  background-image: image-set(url("../img/hero-block/background-3-desktop-1x.webp") type("image/webp"), url("../img/hero-block/background-3-desktop-1x.jpg") type("image/jpg"));
-}
-@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
-  .hero-block__slide--altai {
-    background-image: -webkit-image-set(url("../img/hero-block/background-3-desktop-2x.webp") type("image/webp"), url("../img/hero-block/background-3-desktop-2x.jpg") type("image/jpg"));
-    background-image: image-set(url("../img/hero-block/background-3-desktop-2x.webp") type("image/webp"), url("../img/hero-block/background-3-desktop-2x.jpg") type("image/jpg"));
-  }
+  background-image: url("../img/hero-block/background-3-desktop-1x.jpg");
+  background-image: webkit-image-set(url("../img/hero-block/background-3-desktop-2x.jpg") 2x, url("../img/hero-block/background-3-desktop-1x.jpg") 1x);
+  background-image: -webkit-image-set(url("../img/hero-block/background-3-desktop-2x.webp") type("image/webp") 2x, url("../img/hero-block/background-3-desktop-1x.webp") type("image/webp") 1x, url("../img/hero-block/background-3-desktop-2x.jpg") type("image/jpg") 2x, url("../img/hero-block/background-3-desktop-1x.jpg") type("image/jpg") 1x);
+  background-image: image-set(url("../img/hero-block/background-3-desktop-2x.webp") type("image/webp") 2x, url("../img/hero-block/background-3-desktop-1x.webp") type("image/webp") 1x, url("../img/hero-block/background-3-desktop-2x.jpg") type("image/jpg") 2x, url("../img/hero-block/background-3-desktop-1x.jpg") type("image/jpg") 1x);
 }
 @media (max-width: 1199px) {
   .hero-block__slide--altai {
-    background-image: -webkit-image-set(url("../img/hero-block/background-3-tablet-1x.webp") type("image/webp"), url("../img/hero-block/background-3-tablet-1x.jpg") type("image/jpg"));
-    background-image: image-set(url("../img/hero-block/background-3-tablet-1x.webp") type("image/webp"), url("../img/hero-block/background-3-tablet-1x.jpg") type("image/jpg"));
-  }
-}
-@media (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1199px) and (min-resolution: 144dpi), (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 1199px) and (min-resolution: 2dppx) {
-  .hero-block__slide--altai {
-    background-image: -webkit-image-set(url("../img/hero-block/background-3-tablet-2x.webp") type("image/webp"), url("../img/hero-block/background-3-tablet-2x.jpg") type("image/jpg"));
-    background-image: image-set(url("../img/hero-block/background-3-tablet-2x.webp") type("image/webp"), url("../img/hero-block/background-3-tablet-2x.jpg") type("image/jpg"));
+    background-image: url("../img/hero-block/background-3-tablet-1x.jpg");
+    background-image: webkit-image-set(url("../img/hero-block/background-3-tablet-2x.jpg") 2x, url("../img/hero-block/background-3-tablet-1x.jpg") 1x);
+    background-image: -webkit-image-set(url("../img/hero-block/background-3-tablet-2x.webp") type("image/webp") 2x, url("../img/hero-block/background-3-tablet-1x.webp") type("image/webp") 1x, url("../img/hero-block/background-3-tablet-2x.jpg") type("image/jpg") 2x, url("../img/hero-block/background-3-tablet-1x.jpg") type("image/jpg") 1x);
+    background-image: image-set(url("../img/hero-block/background-3-tablet-2x.webp") type("image/webp") 2x, url("../img/hero-block/background-3-tablet-1x.webp") type("image/webp") 1x, url("../img/hero-block/background-3-tablet-2x.jpg") type("image/jpg") 2x, url("../img/hero-block/background-3-tablet-1x.jpg") type("image/jpg") 1x);
   }
 }
 @media (max-width: 767px) {
   .hero-block__slide--altai {
-    background-image: -webkit-image-set(url("../img/hero-block/background-3-mobile-1x.webp") type("image/webp"), url("../img/hero-block/background-3-mobile-1x.jpg") type("image/jpg"));
-    background-image: image-set(url("../img/hero-block/background-3-mobile-1x.webp") type("image/webp"), url("../img/hero-block/background-3-mobile-1x.jpg") type("image/jpg"));
+    background-image: url("../img/hero-block/background-3-mobile-1x.jpg");
+    background-image: webkit-image-set(url("../img/hero-block/background-3-mobile-2x.jpg") 2x, url("../img/hero-block/background-3-mobile-1x.jpg") 1x);
+    background-image: -webkit-image-set(url("../img/hero-block/background-3-mobile-2x.webp") type("image/webp") 2x, url("../img/hero-block/background-3-mobile-1x.webp") type("image/webp") 1x, url("../img/hero-block/background-3-mobile-2x.jpg") type("image/jpg") 2x, url("../img/hero-block/background-3-mobile-1x.jpg") type("image/jpg") 1x);
+    background-image: image-set(url("../img/hero-block/background-3-mobile-2x.webp") type("image/webp") 2x, url("../img/hero-block/background-3-mobile-1x.webp") type("image/webp") 1x, url("../img/hero-block/background-3-mobile-2x.jpg") type("image/jpg") 2x, url("../img/hero-block/background-3-mobile-1x.jpg") type("image/jpg") 1x);
   }
 }
-@media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 767px) and (min-resolution: 2dppx) {
-  .hero-block__slide--altai {
-    background-image: -webkit-image-set(url("../img/hero-block/background-3-mobile-2x.webp") type("image/webp"), url("../img/hero-block/background-3-mobile-2x.jpg") type("image/jpg"));
-    background-image: image-set(url("../img/hero-block/background-3-mobile-2x.webp") type("image/webp"), url("../img/hero-block/background-3-mobile-2x.jpg") type("image/jpg"));
-  }
+.hero-block__slide button,
+.hero-block__slide a {
+  display: none;
 }
 
 .hero-block__slide-container {
@@ -2864,13 +2843,13 @@ button,
 }
 
 .hero-block__pagination-bullet {
-  display: block;
   width: 10px;
   height: 10px;
   border-radius: 50%;
   border: 1px solid #ffffff;
   background-color: transparent;
   cursor: pointer;
+  display: none;
 }
 @media (max-width: 767px) {
   .hero-block__pagination-bullet {
@@ -3133,6 +3112,14 @@ button,
   }
 }
 
+.hero-block__slide.swiper-slide-active button,
+.hero-block__slide.swiper-slide-active a {
+  display: block;
+}
+.hero-block__slide.swiper-slide-active .hero-block__pagination-bullet {
+  display: block;
+}
+
 .audio-card {
   border: 2px solid #ffffff;
   background: rgba(245, 246, 250, 0.9);
@@ -3308,14 +3295,10 @@ button,
   left: 0;
   bottom: -69;
   z-index: -1;
-  background-image: -webkit-image-set(url("../img/clouds/clouds-2-1x.webp") type("image/webp"), url("../img/clouds/clouds-2-1x.png") type("image/png"));
-  background-image: image-set(url("../img/clouds/clouds-2-1x.webp") type("image/webp"), url("../img/clouds/clouds-2-1x.png") type("image/png"));
-}
-@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
-  .tours::before {
-    background-image: -webkit-image-set(url("../img/clouds/clouds-2-2x.webp") type("image/webp"), url("../img/clouds/clouds-2-2x.png") type("image/png"));
-    background-image: image-set(url("../img/clouds/clouds-2-2x.webp") type("image/webp"), url("../img/clouds/clouds-2-2x.png") type("image/png"));
-  }
+  background-image: url("../img/clouds/clouds-2-1x.png");
+  background-image: webkit-image-set(url("../img/clouds/clouds-2-2x.png") 2x, url("../img/clouds/clouds-2-1x.png") 1x);
+  background-image: -webkit-image-set(url("../img/clouds/clouds-2-2x.webp") type("image/webp") 2x, url("../img/clouds/clouds-2-1x.webp") type("image/webp") 1x, url("../img/clouds/clouds-2-2x.png") type("image/png") 2x, url("../img/clouds/clouds-2-1x.png") type("image/png") 1x);
+  background-image: image-set(url("../img/clouds/clouds-2-2x.webp") type("image/webp") 2x, url("../img/clouds/clouds-2-1x.webp") type("image/webp") 1x, url("../img/clouds/clouds-2-2x.png") type("image/png") 2x, url("../img/clouds/clouds-2-1x.png") type("image/png") 1x);
 }
 @media (max-width: 1199px) {
   .tours::before {
@@ -3332,28 +3315,20 @@ button,
   right: 0;
   top: -19px;
   z-index: -1;
-  background-image: -webkit-image-set(url("../img/clouds/clouds-1-desktop-1x.webp") type("image/webp"), url("../img/clouds/clouds-1-desktop-1x.png") type("image/png"));
-  background-image: image-set(url("../img/clouds/clouds-1-desktop-1x.webp") type("image/webp"), url("../img/clouds/clouds-1-desktop-1x.png") type("image/png"));
-}
-@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
-  .tours::after {
-    background-image: -webkit-image-set(url("../img/clouds/clouds-1-desktop-2x.webp") type("image/webp"), url("../img/clouds/clouds-1-desktop-2x.png") type("image/png"));
-    background-image: image-set(url("../img/clouds/clouds-1-desktop-2x.webp") type("image/webp"), url("../img/clouds/clouds-1-desktop-2x.png") type("image/png"));
-  }
+  background-image: url("../img/clouds/clouds-1-desktop-1x.png");
+  background-image: webkit-image-set(url("../img/clouds/clouds-1-desktop-2x.png") 2x, url("../img/clouds/clouds-1-desktop-1x.png") 1x);
+  background-image: -webkit-image-set(url("../img/clouds/clouds-1-desktop-2x.webp") type("image/webp") 2x, url("../img/clouds/clouds-1-desktop-1x.webp") type("image/webp") 1x, url("../img/clouds/clouds-1-desktop-2x.png") type("image/png") 2x, url("../img/clouds/clouds-1-desktop-1x.png") type("image/png") 1x);
+  background-image: image-set(url("../img/clouds/clouds-1-desktop-2x.webp") type("image/webp") 2x, url("../img/clouds/clouds-1-desktop-1x.webp") type("image/webp") 1x, url("../img/clouds/clouds-1-desktop-2x.png") type("image/png") 2x, url("../img/clouds/clouds-1-desktop-1x.png") type("image/png") 1x);
 }
 @media (max-width: 1199px) {
   .tours::after {
     top: -93px;
     width: 294px;
     height: 1364px;
-    background-image: -webkit-image-set(url("../img/clouds/clouds-1-tablet-1x.webp") type("image/webp"), url("../img/clouds/clouds-1-tablet-1x.png") type("image/png"));
-    background-image: image-set(url("../img/clouds/clouds-1-tablet-1x.webp") type("image/webp"), url("../img/clouds/clouds-1-tablet-1x.png") type("image/png"));
-  }
-}
-@media (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1199px) and (min-resolution: 144dpi), (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 1199px) and (min-resolution: 2dppx) {
-  .tours::after {
-    background-image: -webkit-image-set(url("../img/clouds/clouds-1-tablet-2x.webp") type("image/webp"), url("../img/clouds/clouds-1-tablet-2x.png") type("image/png"));
-    background-image: image-set(url("../img/clouds/clouds-1-tablet-2x.webp") type("image/webp"), url("../img/clouds/clouds-1-tablet-2x.png") type("image/png"));
+    background-image: url("../img/clouds/clouds-1-tablet-1x.png");
+    background-image: webkit-image-set(url("../img/clouds/clouds-1-tablet-2x.png") 2x, url("../img/clouds/clouds-1-tablet-1x.png") 1x);
+    background-image: -webkit-image-set(url("../img/clouds/clouds-1-tablet-2x.webp") type("image/webp") 2x, url("../img/clouds/clouds-1-tablet-1x.webp") type("image/webp") 1x, url("../img/clouds/clouds-1-tablet-2x.png") type("image/png") 2x, url("../img/clouds/clouds-1-tablet-1x.png") type("image/png") 1x);
+    background-image: image-set(url("../img/clouds/clouds-1-tablet-2x.webp") type("image/webp") 2x, url("../img/clouds/clouds-1-tablet-1x.webp") type("image/webp") 1x, url("../img/clouds/clouds-1-tablet-2x.png") type("image/png") 2x, url("../img/clouds/clouds-1-tablet-1x.png") type("image/png") 1x);
   }
 }
 @media (max-width: 767px) {
@@ -3361,14 +3336,10 @@ button,
     top: 137px;
     width: 176px;
     height: 595px;
-    background-image: -webkit-image-set(url("../img/clouds/clouds-1-mobile-1x.webp") type("image/webp"), url("../img/clouds/clouds-1-mobile-1x.png") type("image/png"));
-    background-image: image-set(url("../img/clouds/clouds-1-mobile-1x.webp") type("image/webp"), url("../img/clouds/clouds-1-mobile-1x.png") type("image/png"));
-  }
-}
-@media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 767px) and (min-resolution: 2dppx) {
-  .tours::after {
-    background-image: -webkit-image-set(url("../img/clouds/clouds-1-mobile-2x.webp") type("image/webp"), url("../img/clouds/clouds-1-mobile-2x.png") type("image/png"));
-    background-image: image-set(url("../img/clouds/clouds-1-mobile-2x.webp") type("image/webp"), url("../img/clouds/clouds-1-mobile-2x.png") type("image/png"));
+    background-image: url("../img/clouds/clouds-1-mobile-1x.png");
+    background-image: webkit-image-set(url("../img/clouds/clouds-1-mobile-2x.png") 2x, url("../img/clouds/clouds-1-mobile-1x.png") 1x);
+    background-image: -webkit-image-set(url("../img/clouds/clouds-1-mobile-2x.webp") type("image/webp") 2x, url("../img/clouds/clouds-1-mobile-1x.webp") type("image/webp") 1x, url("../img/clouds/clouds-1-mobile-2x.png") type("image/png") 2x, url("../img/clouds/clouds-1-mobile-1x.png") type("image/png") 1x);
+    background-image: image-set(url("../img/clouds/clouds-1-mobile-2x.webp") type("image/webp") 2x, url("../img/clouds/clouds-1-mobile-1x.webp") type("image/webp") 1x, url("../img/clouds/clouds-1-mobile-2x.png") type("image/png") 2x, url("../img/clouds/clouds-1-mobile-1x.png") type("image/png") 1x);
   }
 }
 
@@ -3505,29 +3476,25 @@ button,
 
 .tour-card {
   position: relative;
-  min-height: 412px;
-  max-height: 100%;
   height: auto;
   color: #ffffff;
   background-color: #0266c1;
 }
+@media (max-width: 767px) {
+  .tour-card {
+    min-height: 412px;
+  }
+}
 .tour-card picture {
-  position: absolute;
+  position: relative;
+  z-index: 1;
   inset: 0;
-  -o-object-fit: cover;
-     object-fit: cover;
-  min-width: 100%;
-  width: auto;
-  height: 100%;
-  min-height: 412px;
+  width: 100%;
+  height: auto;
 }
 .tour-card img {
-  min-width: 100%;
-  width: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
-  height: 100%;
-  min-height: 412px;
+  width: 100%;
+  height: auto;
 }
 .tour-card h3 {
   display: block;
@@ -3564,7 +3531,8 @@ button,
 }
 
 .tour-card__text-content {
-  position: relative;
+  position: absolute;
+  top: 0;
   z-index: 2;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4179,9 +4147,9 @@ button,
   display: -ms-flexbox;
   display: flex;
   gap: 15px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   margin: auto 0;
   height: 100%;
 }
@@ -4247,9 +4215,11 @@ button,
   margin: 0;
   width: 30px;
   height: 30px;
+  margin-bottom: 10px;
 }
 @media (max-width: 1199px) {
   .education__item svg {
+    margin: 0;
     margin-top: 5px;
   }
 }
@@ -4408,28 +4378,20 @@ button,
   top: 75px;
   left: 0;
   z-index: -1;
-  background-image: -webkit-image-set(url("../img/about-desktop-1x.webp") type("image/webp"), url("../img/about-desktop-1x.jpg") type("image/jpg"));
-  background-image: image-set(url("../img/about-desktop-1x.webp") type("image/webp"), url("../img/about-desktop-1x.jpg") type("image/jpg"));
-}
-@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
-  .about::before {
-    background-image: -webkit-image-set(url("../img/about-desktop-2x.webp") type("image/webp"), url("../img/about-desktop-2x.jpg") type("image/jpg"));
-    background-image: image-set(url("../img/about-desktop-2x.webp") type("image/webp"), url("../img/about-desktop-2x.jpg") type("image/jpg"));
-  }
+  background-image: url("../img/about-desktop-1x.jpg");
+  background-image: webkit-image-set(url("../img/about-desktop-2x.jpg") 2x, url("../img/about-desktop-1x.jpg") 1x);
+  background-image: -webkit-image-set(url("../img/about-desktop-2x.webp") type("image/webp") 2x, url("../img/about-desktop-1x.webp") type("image/webp") 1x, url("../img/about-desktop-2x.jpg") type("image/jpg") 2x, url("../img/about-desktop-1x.jpg") type("image/jpg") 1x);
+  background-image: image-set(url("../img/about-desktop-2x.webp") type("image/webp") 2x, url("../img/about-desktop-1x.webp") type("image/webp") 1x, url("../img/about-desktop-2x.jpg") type("image/jpg") 2x, url("../img/about-desktop-1x.jpg") type("image/jpg") 1x);
 }
 @media (max-width: 1199px) {
   .about::before {
     width: 475px;
     height: 402px;
     top: 60px;
-    background-image: -webkit-image-set(url("../img/about-tablet-1x.webp") type("image/webp"), url("../img/about-tablet-1x.jpg") type("image/jpg"));
-    background-image: image-set(url("../img/about-tablet-1x.webp") type("image/webp"), url("../img/about-tablet-1x.jpg") type("image/jpg"));
-  }
-}
-@media (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1199px) and (min-resolution: 144dpi), (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 1199px) and (min-resolution: 2dppx) {
-  .about::before {
-    background-image: -webkit-image-set(url("../img/about-tablet-2x.webp") type("image/webp"), url("../img/about-tablet-2x.jpg") type("image/jpg"));
-    background-image: image-set(url("../img/about-tablet-2x.webp") type("image/webp"), url("../img/about-tablet-2x.jpg") type("image/jpg"));
+    background-image: url("../img/about-tablet-1x.jpg");
+    background-image: webkit-image-set(url("../img/about-tablet-2x.jpg") 2x, url("../img/about-tablet-1x.jpg") 1x);
+    background-image: -webkit-image-set(url("../img/about-tablet-2x.webp") type("image/webp") 2x, url("../img/about-tablet-1x.webp") type("image/webp") 1x, url("../img/about-tablet-2x.jpg") type("image/jpg") 2x, url("../img/about-tablet-1x.jpg") type("image/jpg") 1x);
+    background-image: image-set(url("../img/about-tablet-2x.webp") type("image/webp") 2x, url("../img/about-tablet-1x.webp") type("image/webp") 1x, url("../img/about-tablet-2x.jpg") type("image/jpg") 2x, url("../img/about-tablet-1x.jpg") type("image/jpg") 1x);
   }
 }
 @media (max-width: 767px) {
@@ -4437,14 +4399,10 @@ button,
     width: 320px;
     height: 402px;
     top: -16px;
-    background-image: -webkit-image-set(url("../img/about-mobile-1x.webp") type("image/webp"), url("../img/about-mobile-1x.jpg") type("image/jpg"));
-    background-image: image-set(url("../img/about-mobile-1x.webp") type("image/webp"), url("../img/about-mobile-1x.jpg") type("image/jpg"));
-  }
-}
-@media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 767px) and (min-resolution: 2dppx) {
-  .about::before {
-    background-image: -webkit-image-set(url("../img/about-mobile-2x.webp") type("image/webp"), url("../img/about-mobile-2x.jpg") type("image/jpg"));
-    background-image: image-set(url("../img/about-mobile-2x.webp") type("image/webp"), url("../img/about-mobile-2x.jpg") type("image/jpg"));
+    background-image: url("../img/about-mobile-1x.jpg");
+    background-image: webkit-image-set(url("../img/about-mobile-2x.jpg") 2x, url("../img/about-mobile-1x.jpg") 1x);
+    background-image: -webkit-image-set(url("../img/about-mobile-2x.webp") type("image/webp") 2x, url("../img/about-mobile-1x.webp") type("image/webp") 1x, url("../img/about-mobile-2x.jpg") type("image/jpg") 2x, url("../img/about-mobile-1x.jpg") type("image/jpg") 1x);
+    background-image: image-set(url("../img/about-mobile-2x.webp") type("image/webp") 2x, url("../img/about-mobile-1x.webp") type("image/webp") 1x, url("../img/about-mobile-2x.jpg") type("image/jpg") 2x, url("../img/about-mobile-1x.jpg") type("image/jpg") 1x);
   }
 }
 .about::after {
@@ -4457,14 +4415,10 @@ button,
   right: 0;
   top: -90px;
   z-index: -1;
-  background-image: -webkit-image-set(url("../img/clouds/clouds-3-1x.webp") type("image/webp"), url("../img/clouds/clouds-3-1x.png") type("image/png"));
-  background-image: image-set(url("../img/clouds/clouds-3-1x.webp") type("image/webp"), url("../img/clouds/clouds-3-1x.png") type("image/png"));
-}
-@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
-  .about::after {
-    background-image: -webkit-image-set(url("../img/clouds/clouds-3-2x.webp") type("image/webp"), url("../img/clouds/clouds-3-2x.png") type("image/png"));
-    background-image: image-set(url("../img/clouds/clouds-3-2x.webp") type("image/webp"), url("../img/clouds/clouds-3-2x.png") type("image/png"));
-  }
+  background-image: url("../img/clouds/clouds-3-1x.png");
+  background-image: webkit-image-set(url("../img/clouds/clouds-3-2x.png") 2x, url("../img/clouds/clouds-3-1x.png") 1x);
+  background-image: -webkit-image-set(url("../img/clouds/clouds-3-2x.webp") type("image/webp") 2x, url("../img/clouds/clouds-3-1x.webp") type("image/webp") 1x, url("../img/clouds/clouds-3-2x.png") type("image/png") 2x, url("../img/clouds/clouds-3-1x.png") type("image/png") 1x);
+  background-image: image-set(url("../img/clouds/clouds-3-2x.webp") type("image/webp") 2x, url("../img/clouds/clouds-3-1x.webp") type("image/webp") 1x, url("../img/clouds/clouds-3-2x.png") type("image/png") 2x, url("../img/clouds/clouds-3-1x.png") type("image/png") 1x);
 }
 @media (max-width: 1199px) {
   .about::after {
@@ -4685,6 +4639,8 @@ button,
 }
 
 .feedback-card__avatar {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
   -ms-flex-preferred-size: content;
       flex-basis: content;
   min-width: 258px;
@@ -4709,13 +4665,13 @@ button,
   }
 }
 .feedback-card__avatar picture {
-  height: 100%;
+  height: auto;
   -o-object-fit: cover;
      object-fit: cover;
 }
 @media (max-width: 767px) {
   .feedback-card__avatar picture {
-    width: 100%;
+    width: auto;
     height: auto;
     -o-object-fit: cover;
        object-fit: cover;
@@ -4835,14 +4791,10 @@ button,
   left: 0;
   top: -170px;
   z-index: -1;
-  background-image: -webkit-image-set(url("../img/clouds/clouds-5-1x.webp") type("image/webp"), url("../img/clouds/clouds-5-1x.png") type("image/png"));
-  background-image: image-set(url("../img/clouds/clouds-5-1x.webp") type("image/webp"), url("../img/clouds/clouds-5-1x.png") type("image/png"));
-}
-@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
-  .advantages::before {
-    background-image: -webkit-image-set(url("../img/clouds/clouds-5-2x.webp") type("image/webp"), url("../img/clouds/clouds-5-2x.png") type("image/png"));
-    background-image: image-set(url("../img/clouds/clouds-5-2x.webp") type("image/webp"), url("../img/clouds/clouds-5-2x.png") type("image/png"));
-  }
+  background-image: url("../img/clouds/clouds-5-1x.png");
+  background-image: webkit-image-set(url("../img/clouds/clouds-5-2x.png") 2x, url("../img/clouds/clouds-5-1x.png") 1x);
+  background-image: -webkit-image-set(url("../img/clouds/clouds-5-2x.webp") type("image/webp") 2x, url("../img/clouds/clouds-5-1x.webp") type("image/webp") 1x, url("../img/clouds/clouds-5-2x.png") type("image/png") 2x, url("../img/clouds/clouds-5-1x.png") type("image/png") 1x);
+  background-image: image-set(url("../img/clouds/clouds-5-2x.webp") type("image/webp") 2x, url("../img/clouds/clouds-5-1x.webp") type("image/webp") 1x, url("../img/clouds/clouds-5-2x.png") type("image/png") 2x, url("../img/clouds/clouds-5-1x.png") type("image/png") 1x);
 }
 @media (max-width: 1199px) {
   .advantages::before {
@@ -4859,14 +4811,10 @@ button,
   right: 0;
   top: 10px;
   z-index: -1;
-  background-image: -webkit-image-set(url("../img/clouds/clouds-4-1x.webp") type("image/webp"), url("../img/clouds/clouds-4-1x.png") type("image/png"));
-  background-image: image-set(url("../img/clouds/clouds-4-1x.webp") type("image/webp"), url("../img/clouds/clouds-4-1x.png") type("image/png"));
-}
-@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
-  .advantages::after {
-    background-image: -webkit-image-set(url("../img/clouds/clouds-4-2x.webp") type("image/webp"), url("../img/clouds/clouds-4-2x.png") type("image/png"));
-    background-image: image-set(url("../img/clouds/clouds-4-2x.webp") type("image/webp"), url("../img/clouds/clouds-4-2x.png") type("image/png"));
-  }
+  background-image: url("../img/clouds/clouds-4-1x.png");
+  background-image: webkit-image-set(url("../img/clouds/clouds-4-2x.png") 2x, url("../img/clouds/clouds-4-1x.png") 1x);
+  background-image: -webkit-image-set(url("../img/clouds/clouds-4-2x.webp") type("image/webp") 2x, url("../img/clouds/clouds-4-1x.webp") type("image/webp") 1x, url("../img/clouds/clouds-4-2x.png") type("image/png") 2x, url("../img/clouds/clouds-4-1x.png") type("image/png") 1x);
+  background-image: image-set(url("../img/clouds/clouds-4-2x.webp") type("image/webp") 2x, url("../img/clouds/clouds-4-1x.webp") type("image/webp") 1x, url("../img/clouds/clouds-4-2x.png") type("image/png") 2x, url("../img/clouds/clouds-4-1x.png") type("image/png") 1x);
 }
 @media (max-width: 1199px) {
   .advantages::after {
@@ -5156,7 +5104,7 @@ button,
 }
 
 .gallery__slider {
-  max-width: 1920px;
+  max-width: 1440px;
 }
 @media (min-width: 768px) and (max-width: 1439px) {
   .gallery__slider {
@@ -5231,37 +5179,25 @@ button,
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-image: -webkit-image-set(url("../img/form-background-desktop-1x.webp") type("image/webp"), url("../img/form-background-desktop-1x.jpg") type("image/jpg"));
-  background-image: image-set(url("../img/form-background-desktop-1x.webp") type("image/webp"), url("../img/form-background-desktop-1x.jpg") type("image/jpg"));
-}
-@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
-  .ask {
-    background-image: -webkit-image-set(url("../img/form-background-desktop-2x.webp") type("image/webp"), url("../img/form-background-desktop-2x.jpg") type("image/jpg"));
-    background-image: image-set(url("../img/form-background-desktop-2x.webp") type("image/webp"), url("../img/form-background-desktop-2x.jpg") type("image/jpg"));
-  }
+  background-image: url("../img/form-background-desktop-1x.jpg");
+  background-image: webkit-image-set(url("../img/form-background-desktop-2x.jpg") 2x, url("../img/form-background-desktop-1x.jpg") 1x);
+  background-image: -webkit-image-set(url("../img/form-background-desktop-2x.webp") type("image/webp") 2x, url("../img/form-background-desktop-1x.webp") type("image/webp") 1x, url("../img/form-background-desktop-2x.jpg") type("image/jpg") 2x, url("../img/form-background-desktop-1x.jpg") type("image/jpg") 1x);
+  background-image: image-set(url("../img/form-background-desktop-2x.webp") type("image/webp") 2x, url("../img/form-background-desktop-1x.webp") type("image/webp") 1x, url("../img/form-background-desktop-2x.jpg") type("image/jpg") 2x, url("../img/form-background-desktop-1x.jpg") type("image/jpg") 1x);
 }
 @media (max-width: 1199px) {
   .ask {
-    background-image: -webkit-image-set(url("../img/form-background-tablet-1x.webp") type("image/webp"), url("../img/form-background-tablet-1x.jpg") type("image/jpg"));
-    background-image: image-set(url("../img/form-background-tablet-1x.webp") type("image/webp"), url("../img/form-background-tablet-1x.jpg") type("image/jpg"));
-  }
-}
-@media (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1199px) and (min-resolution: 144dpi), (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 1199px) and (min-resolution: 2dppx) {
-  .ask {
-    background-image: -webkit-image-set(url("../img/form-background-tablet-2x.webp") type("image/webp"), url("../img/form-background-tablet-2x.jpg") type("image/jpg"));
-    background-image: image-set(url("../img/form-background-tablet-2x.webp") type("image/webp"), url("../img/form-background-tablet-2x.jpg") type("image/jpg"));
+    background-image: url("../img/form-background-tablet-1x.jpg");
+    background-image: webkit-image-set(url("../img/form-background-tablet-2x.jpg") 2x, url("../img/form-background-tablet-1x.jpg") 1x);
+    background-image: -webkit-image-set(url("../img/form-background-tablet-2x.webp") type("image/webp") 2x, url("../img/form-background-tablet-1x.webp") type("image/webp") 1x, url("../img/form-background-tablet-2x.jpg") type("image/jpg") 2x, url("../img/form-background-tablet-1x.jpg") type("image/jpg") 1x);
+    background-image: image-set(url("../img/form-background-tablet-2x.webp") type("image/webp") 2x, url("../img/form-background-tablet-1x.webp") type("image/webp") 1x, url("../img/form-background-tablet-2x.jpg") type("image/jpg") 2x, url("../img/form-background-tablet-1x.jpg") type("image/jpg") 1x);
   }
 }
 @media (max-width: 767px) {
   .ask {
-    background-image: -webkit-image-set(url("../img/form-background-mobile-1x.webp") type("image/webp"), url("../img/form-background-mobile-1x.jpg") type("image/jpg"));
-    background-image: image-set(url("../img/form-background-mobile-1x.webp") type("image/webp"), url("../img/form-background-mobile-1x.jpg") type("image/jpg"));
-  }
-}
-@media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 767px) and (min-resolution: 2dppx) {
-  .ask {
-    background-image: -webkit-image-set(url("../img/form-background-mobile-2x.webp") type("image/webp"), url("../img/form-background-mobile-2x.jpg") type("image/jpg"));
-    background-image: image-set(url("../img/form-background-mobile-2x.webp") type("image/webp"), url("../img/form-background-mobile-2x.jpg") type("image/jpg"));
+    background-image: url("../img/form-background-mobile-1x.jpg");
+    background-image: webkit-image-set(url("../img/form-background-mobile-2x.jpg") 2x, url("../img/form-background-mobile-1x.jpg") 1x);
+    background-image: -webkit-image-set(url("../img/form-background-mobile-2x.webp") type("image/webp") 2x, url("../img/form-background-mobile-1x.webp") type("image/webp") 1x, url("../img/form-background-mobile-2x.jpg") type("image/jpg") 2x, url("../img/form-background-mobile-1x.jpg") type("image/jpg") 1x);
+    background-image: image-set(url("../img/form-background-mobile-2x.webp") type("image/webp") 2x, url("../img/form-background-mobile-1x.webp") type("image/webp") 1x, url("../img/form-background-mobile-2x.jpg") type("image/jpg") 2x, url("../img/form-background-mobile-1x.jpg") type("image/jpg") 1x);
   }
 }
 .ask h2 {
@@ -5513,12 +5449,6 @@ button,
 }
 .ask__validator.is-invalid input {
   border-color: #ff121f;
-}
-.ask__validator.is-invalid span {
-  word-break: break-word;
-  color: #ff121f;
-  font-size: 14px;
-  line-height: 22px;
 }
 
 .contacts {
