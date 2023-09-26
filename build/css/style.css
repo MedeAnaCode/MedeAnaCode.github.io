@@ -5505,6 +5505,7 @@ input[type=checkbox]:checked:disabled ~ .modal-form__checkbox-icon::after {
   padding: 11px 25px;
   border: 1px solid #316dc2;
   color: #316dc2;
+  outline-offset: 1px;
 }
 @media (max-width: 1199px) {
   .news__button--active {
