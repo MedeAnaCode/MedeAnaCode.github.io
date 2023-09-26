@@ -4105,8 +4105,8 @@ button,
   font-size: 16px;
   font-family: "Manrope", "Arial", sans-serif;
   border-radius: 8px;
-  border: none;
-  outline: 1px solid rgba(72, 72, 72, 0.3);
+  border: 1px solid rgba(72, 72, 72, 0.3);
+  outline: none;
 }
 @media (max-width: 767px) {
   .modal-form__input-wrapper input {
@@ -4117,10 +4117,10 @@ button,
   }
 }
 .modal-form__input-wrapper input:hover {
-  outline: 1px solid #484848;
+  border: 1px solid #484848;
 }
 .modal-form__input-wrapper input:active, .modal-form__input-wrapper input:focus, .modal-form__input-wrapper input:focus-visible {
-  outline: 1px solid #484848;
+  border: 1px solid #484848;
 }
 .modal-form__input-wrapper input:disabled {
   border: 1px solid rgba(169, 175, 183, 0.5);
@@ -4150,6 +4150,7 @@ button,
 }
 .modal-form__select.is-invalid .modal-form__select-button {
   border: 1px solid #ff5e66;
+  background-color: rgba(255, 94, 102, 0.2);
 }
 
 .modal-form__select-button {
@@ -6671,6 +6672,7 @@ input[type=checkbox]:checked:disabled ~ .modal-form__checkbox-icon::after {
 }
 .write-to-us__select.is-invalid .write-to-us__select-button {
   border: 1px solid #ff5e66;
+  background-color: rgba(255, 94, 102, 0.2);
 }
 
 .write-to-us__select-button {
